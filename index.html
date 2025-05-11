@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch Her Smile</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <!-- Start Screen -->
+    <div id="start-screen" class="screen">
+        <h1>Catch Her Smile</h1>
+        <p>Chase the glowing hearts in this dreamy world</p>
+        <div class="instructions">
+            <p>Tap or Press SPACE to Jump</p>
+            <p>Hold to Float Gently</p>
+        </div>
+        <button id="start-btn" class="glow-btn">Begin Journey</button>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="game-over-screen" class="screen hidden">
+        <h2>Journey Paused</h2>
+        <div class="score-display">
+            <p>Hearts Collected: <span id="final-score">0</span></p>
+            <p>Best: <span id="best-score">0</span></p>
+        </div>
+        <div id="secret-message" class="hidden">
+            <p class="love-message">💌 A special message is forming...</p>
+        </div>
+        <button id="restart-btn" class="glow-btn">Try Again</button>
+    </div>
+
+    <!-- Game Container -->
+    <div id="game-container"></div>
+
+    <!-- Game HUD -->
+    <div id="game-hud" class="hidden">
+        <div class="hearts-counter">
+            <span id="hearts-collected">0</span> 💖
+        </div>
+        <div class="tap-indicator">
+            Tap/Space to Jump
+        </div>
+    </div>
+
+    <!-- Audio -->
+    <audio id="collect-sound" preload="auto">
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-fairy-arcade-sparkle-866.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="background-music" loop>
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-dreaming-in-the-garden-2824.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="game.js"></script>
+</body>
+</html>
